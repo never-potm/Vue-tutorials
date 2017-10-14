@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorial</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+<div id="vue-app">
+    <a v-bind:href="website">Link</a><br/>
+    {{greet()}}<br/>
+    {{name}}<br/>
+    <p>My age is {{age}}</p>
+    <p v-html="websiteTag"></p>
+    <!--<button v-on:click="add">Add Year</button>-->
+    <!-- @ is shorthand for "v-on" -->
+    <button @click="add">Add Year</button>
+    <button v-on:click="subtract">Subtract Year</button>
+    <br/><br/>
+
+    <div id="canvas"v-on:mousemove="updateXY">{{x}}, {{y}}
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
