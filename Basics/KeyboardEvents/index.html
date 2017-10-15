@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorial</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="vue-app">
+
+    <h1>Keyboard Events</h1><br/>
+    <label>Name : </label>
+    <input type="text" v-on:keyup.alt.enter="logName"/>
+
+    <label>Age : </label>
+    <input type="text" v-on:keyup.enter="logAge"/>
+
+    <script src="../app.js"></script>
+</div>
+</body>
+</html>

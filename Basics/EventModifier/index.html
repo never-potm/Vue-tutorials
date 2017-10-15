@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorial</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="vue-app">
+
+    <!-- When we want an event to fire only and only once -->
+    <!-- Then we use v-on:<event>.once -->
+
+    {{age}}
+
+    <button v-on:click.once="add">Add Year</button>
+
+    <!-- The event will call the custon-click-function but it wont open the page -->
+    <a v-on:click.prevent="help" href="https://www.google.in">Get Help!</a>
+
+    <script src="../app.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Properties</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="vue-app">
+
+    <h1>Computed Properties</h1>
+    <!-- Using simple method / variable -->
+    <!--<button v-on:click="a++">Add to a</button>-->
+    <!--<button v-on:click="b++">Add to b</button>-->
+
+    <!-- Using computed properties -->
+    <button v-on:click="a++">Add to a</button>
+    <button v-on:click="b++">Add to b</button>
+
+    <p>Age = {{addToA}}</p>
+    <p>B-{{addToB}}</p>
+
+    <script src="../app.js"></script>
+</div>
+</body>
+</html>

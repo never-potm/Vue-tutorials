@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic CSS</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <div id="vue-app">
+
+        <h2></h2>
+        <!-- red=true outputs class=red -->
+        <!-- red=false outputs class -->
+        <h2>Static CSS</h2>
+        <div v-bind:class="{red:true}"> </div><br/>
+
+        <h2>Dynamic CSS</h2>
+        <!-- available is referred from data in app.js -->
+        <div v-on:click="available = !available" v-bind:class="{available: available}">
+            <span >Suraj</span>
+        </div>
+
+        <h2>More Dynamic CSS</h2>
+        <!-- available is referred from computed in app.js -->
+        <button v-on:click="nearby = !nearby">Toggle nearby</button>
+        <button v-on:click="available = !available">Toggle available</button>
+        <div v-bind:class="compClasses">
+            <span >Zeus</span>
+        </div>
+
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

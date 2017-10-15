@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Conditional</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <div id="vue-app">
+
+    <h1>For - loop conditional</h1>
+        <ul>
+            <li v-for="character in characters">{{ character }}</li>
+        </ul>
+
+        <h2>Ninja list</h2>
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{ index+1 }}. {{ ninja.name }} - {{ ninja.age }}</li>
+        </ul>
+
+        <!-- Output without li tag -->
+        <div v-for="(ninja, index) in ninjas">
+            <h3>{{index + 1}} . {{ninja.name}}</h3>
+        </div>
+
+        <!-- Does not include div tag in the browser <div><h3>Ninja</h3><div> Instead outputs <h3>Ninja</h3>-->
+        <template v-for="(ninja, index) in ninjas">
+            <h3>{{index + 1}} . {{ninja.name}}</h3>
+        </template>
+
+        <!-- Output the value of objects without knowing the property-name -->
+        <!-- Cycling thro array -->
+        <h3>Output object info using key-value</h3>
+        <template v-for="ninja in ninjas">
+
+            <div v-for="(val, key) in ninja">
+                <p>{{key}} - {{val}}</p>
+            </div>
+        </template>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

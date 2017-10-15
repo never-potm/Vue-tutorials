@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Way Data Binding</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="vue-app">
+
+    <h1>2 way data binding</h1><br/>
+
+    <label>Name : </label>
+    <input type="text" v-model="name"/>
+    <span>{{name}}</span><br/>
+
+    <label>Age : </label>
+    <input type="text" v-model="age"/>
+    <span>{{age}}</span>
+
+    <script src="../app.js"></script>
+</div>
+</body>
+</html>

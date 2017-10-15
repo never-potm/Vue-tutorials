@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+<div id="vue-app">
+
+    <h1>Conditionals</h1>
+    <button v-on:click="error = !error">Toggle Error</button>
+    <button v-on:click="success = !success">Toggle Success</button>
+
+
+    <!--<p v-if="error">Error encountered</p>-->
+
+    <!-- If we change it to v-else then it displays success whenever we clear on it -->
+    <!-- But in case of v-else-if, it works like else if and success button is no longer clickable since first condition is true-->
+    <!--<p v-if="success">SUCCESS!!</p>-->
+
+    <!--<p v-else-if="success">SUCCESS!!</p>-->
+
+    <p v-show="error">Error occurred</p>
+    <p v-show="success">Wohoo!! Success</p>
+
+    <!--
+        Difference between v-if and v-show is:
+        v-if completely removes the element from the DOM
+        v-show adds a style of display:none
+    -->
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
